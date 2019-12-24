@@ -6,40 +6,25 @@ namespace practic_7
     {
         static void Main(string[] args)
         {
-            
+            task1_EmptyArry();
         }
 
-        static void task_1(string[] args)
+        public static void task1_EmptyArry()
         {
-            Console.WriteLine("enter num");
+            Console.Write(" Enter length array - ");
             int lenghtArray = int.Parse(Console.ReadLine());
-            int[] array1 = new int[lenghtArray];
-            for (int i = 0; i < array1.Length; i++)
+            int[] arrayInt = new int[lenghtArray];
+            string[] arrayString = new string[lenghtArray];
+            for (int i = 0; i < arrayString.Length; i++)
             {
-                Console.WriteLine(array1[i]);
+                Console.WriteLine("arrayString["+i+"] = \"" + arrayString[i]+"\"");
             }
-        }
-        static void task_2(string[] args)
-        {
-            object[] array2 = new object[3];
-            array2[1] = 32;
-            array2[2] = 'A';
-            array2[3] = "Hello";
-
-            for (int i = 0; i < array2.Length; i++)
+            for (int i = 0; i < arrayInt.Length; i++)
             {
-                Console.WriteLine("1)" + array2[i]);
+                Console.WriteLine("arrayInt[" + i + "] = \"" + arrayInt[i] + "\"");
             }
-            Console.WriteLine("2)" + array2[1]+10 + " " + array2[3]+",guys!");            
-        }
-        static void task_3(string[] args)
-        {
-            int[] array = new int[13];
-            for (int i = 0; i < array.Length; i++)
-            {
-                array[i]= array[i] = new Random().Next();
-            }
-
+            arrayInt[1] = arrayInt[1] + 4;
+            Console.WriteLine("\narrayInt[1] + 4 = " + arrayInt[1]);
         }
     }
 }
