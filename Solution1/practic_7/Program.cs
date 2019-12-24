@@ -9,6 +9,7 @@ namespace practic_7
             task1_EmptyArry();
             task2();
             task3();
+            task4();
         }
 
         public static void task1_EmptyArry()
@@ -25,8 +26,8 @@ namespace practic_7
             {
                 Console.WriteLine("arrayInt[" + i + "] = \"" + arrayInt[i] + "\"");
             }
-            arrayInt[1] = arrayInt[1] + 4;
-            Console.WriteLine("\narrayInt[1] + 4 = " + arrayInt[1]);
+            arrayInt[1] = arrayInt[0] + 4;
+            Console.WriteLine("\narrayInt[0] + 4 = " + arrayInt[1]);
         }
         public static void task2()
         {
@@ -70,6 +71,17 @@ namespace practic_7
                 }
             }
             Console.WriteLine("max - " + max);
+        }
+        public static void task4()
+        {
+            Console.Write("\n Press Enter go to task 4");
+            Console.ReadLine();
+            Console.WriteLine(" Task 4");
+            short num = 5;
+            object obj = num;
+            short num1 = (short)obj;
+            sbyte sb = (sbyte)num1;
+            Console.WriteLine(sb.GetType());
         }
     }
 }
