@@ -8,6 +8,7 @@ namespace practic_7
         {
             task1_EmptyArry();
             task2();
+            task3();
         }
 
         public static void task1_EmptyArry()
@@ -32,22 +33,43 @@ namespace practic_7
             Console.Write("\n Press Enter go to task 2");
             Console.ReadLine();
             Console.WriteLine(" Task 2");
-            object[] array2 = new object[3];
-            array2[0] = 32;
-            array2[1] = 'A';
-            array2[2] = "Hello";
+            object[] array = new object[3];
+            array[0] = 32;
+            array[1] = 'A';
+            array[2] = "Hello";
 
-            for (int i = 0; i < array2.Length; i++)
+            for (int i = 0; i < array.Length; i++)
             {
-                Console.WriteLine("1)" + array2[i]);
+                Console.WriteLine("1)" + array[i]);
             }                
-            array2[0] = (int)array2[0] + 10;
-            array2[2] = (string)array2[2] + ", gays!";
+            array[0] = (int)array[0] + 10;
+            array[2] = (string)array[2] + ", gays!";
             Console.WriteLine();
-            for (int i = 0; i < array2.Length; i++)
+            for (int i = 0; i < array.Length; i++)
             {
-                Console.WriteLine("2)" + array2[i]);
+                Console.WriteLine("2)" + array[i]);
             }
+        }
+        public static void task3()
+        {
+            Console.Write("\n Press Enter go to task 3");
+            Console.ReadLine();
+            Console.WriteLine(" Task 3");
+            int[] array = new int[13];
+            for (int i = 0; i < array.Length; i++)
+            {
+                array[i] = new Random().Next();
+            }
+            int max = 0;
+            for (int i = 0; i < array.Length; i++)
+            {
+                Console.WriteLine(i + " - " + array[i]);
+                if (array[i]>=max)
+                {
+                    max = array[i];
+                }
+            }
+            Console.WriteLine("max - " + max);
         }
     }
 }
