@@ -11,7 +11,6 @@ namespace practic_7
             task3();
             task4();
         }
-
         public static void task1_EmptyArry()
         {
             Console.Write(" Task 1\n Enter length array - ");
@@ -70,7 +69,14 @@ namespace practic_7
                     max = array[i];
                 }
             }
-            Console.WriteLine("max - " + max);
+            Console.WriteLine("\nmax: ");
+            for (int i = 0; i < array.Length; i++)
+            {
+                if (array[i] == max)
+                {
+                    Console.WriteLine("array[" + i +"]" + array[i]);
+                }
+            }            
         }
         public static void task4()
         {
@@ -81,7 +87,8 @@ namespace practic_7
             object obj = num;
             short num1 = (short)obj;
             sbyte sb = (sbyte)num1;
-            Console.WriteLine(sb.GetType());
+            Console.Write(sb.GetType());
+            Console.WriteLine(" = " + sb);
         }
     }
 }
