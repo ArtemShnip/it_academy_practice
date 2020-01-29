@@ -7,32 +7,14 @@ namespace Project._14_2
 {
     class GetSongData
     {
-        public List<Song> songList = new List<Song>();
 
-        public GetSongData()
+        public void GetSong(string name, List<Song> songs)
         {
-            new Song()
-            {
-                Title = "avtor1",
-                Minutes = 3.17,
-                Year = 2019
-            };
-            new Song()
-            {
-                Title = "avtor2",
-                Minutes = 2.17,
-                Year = 2013
-            };
-            new Song()
-            {
-                Title = "avtor3",
-                Minutes = 4.17,
-                Year = 2009
-            };
-        }
-        public Song GetSong(string name)
-        {
-            return songList.FirstOrDefault(x =>x.Avtor == name);
+            var selectedSong = from Song in songs
+                                where Song.Title == name
+                                select Song;
+            foreach (Song song in selectedSong)
+                Console.WriteLine($"Title:{song.Title}, Minutes:{song.Minutes}, Year{song.Year}");
         }
     }
 }

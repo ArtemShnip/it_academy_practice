@@ -8,7 +8,7 @@ namespace Project._14_2
     {
         public string Title { get; set; }
         public double Minutes { get; set; }
-        public string Avtor { get; set; }
+        public string Author { get; set; }
         public int Year { get; set; }
     }
 }
