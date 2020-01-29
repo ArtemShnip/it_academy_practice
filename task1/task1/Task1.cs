@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Project14_1;
+using System;
 
 namespace task1
 {
@@ -8,7 +9,7 @@ namespace task1
         {
 
             string text = Console.ReadLine();
-            Console.WriteLine();
+            Console.WriteLine(text.Cut());
         }
     }
 }
